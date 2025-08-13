@@ -73,14 +73,25 @@ const About = ({ data }) => {
           >
             <div className="relative flex flex-col items-center">
               {/* Profile Picture - Simple Frame */}
-              <div className="relative w-96 h-[28rem] bg-gradient-to-br from-gray-900 via-gray-800 to-black rounded-2xl overflow-hidden shadow-2xl border-2 border-primary/30">
+              <motion.div 
+                className="relative w-96 h-[28rem] bg-gradient-to-br from-gray-900 via-gray-800 to-black rounded-2xl overflow-hidden shadow-2xl border-2 border-primary/30"
+                whileHover={{ 
+                  scale: 1.05,
+                  boxShadow: "0 30px 60px -12px rgba(139, 92, 246, 0.4)",
+                  borderColor: "rgba(139, 92, 246, 0.8)"
+                }}
+                whileTap={{ scale: 0.98 }}
+                transition={{ type: "spring", stiffness: 300, damping: 20 }}
+              >
                 {/* Profile Picture */}
-                <img 
+                <motion.img 
                   src="/images/profilepic.jpeg" 
                   alt="Donna Prince" 
                   className="w-full h-full object-cover"
+                  whileHover={{ scale: 1.1 }}
+                  transition={{ duration: 0.3 }}
                 />
-              </div>
+              </motion.div>
 
               {/* 2. Character Stats Below Photo */}
               <motion.div 
@@ -108,8 +119,14 @@ const About = ({ data }) => {
                     className={`relative bg-gradient-to-r from-gray-800 to-gray-900 rounded-lg p-4 border border-gray-700 cursor-pointer group transition-all duration-200 ${
                       hoveredStat === index ? 'border-primary/50 shadow-lg shadow-primary/20' : 'hover:border-primary/30'
                     }`}
-                    whileHover={{ y: -2, scale: 1.01 }}
-                    transition={{ type: "spring", stiffness: 500, damping: 25 }}
+                    whileHover={{ 
+                      y: -8, 
+                      scale: 1.05,
+                      boxShadow: "0 20px 40px -12px rgba(139, 92, 246, 0.3)",
+                      borderColor: "rgba(139, 92, 246, 0.8)"
+                    }}
+                    whileTap={{ scale: 0.98 }}
+                    transition={{ type: "spring", stiffness: 400, damping: 20 }}
                     onMouseEnter={() => setHoveredStat(index)}
                     onMouseLeave={() => setHoveredStat(null)}
                   >

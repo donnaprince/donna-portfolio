@@ -15,6 +15,15 @@
     line-height: 1.6;
   }
 
+  /* Dark Mode Support */
+  .dark {
+    @apply bg-gray-900 text-white;
+  }
+
+  .dark body {
+    @apply bg-gray-900 text-white;
+  }
+
   /* Typography */
   h1, h2, h3, h4, h5, h6 {
     @apply font-bold tracking-tight;
@@ -99,6 +108,7 @@
     @apply absolute left-3 top-6 w-0.5 h-full bg-primary;
   }
 
+  /* Timeline Item Styles */
   .timeline-item {
     @apply relative mb-8;
   }
@@ -107,33 +117,65 @@
     @apply ml-8;
   }
 
+  /* Interactive Card Hover Effects */
+  .interactive-card {
+    @apply transition-all duration-300 ease-out;
+  }
+
+  .interactive-card:hover {
+    @apply transform -translate-y-2 scale-105 shadow-2xl;
+  }
+
+  /* Progress Bar Animation */
+  .progress-bar {
+    @apply transition-all duration-100 ease-out;
+  }
+
+  /* Mouse Trail Effects */
+  .mouse-trail-particle {
+    @apply pointer-events-none absolute rounded-full filter blur-sm;
+    animation: fadeOut 1s ease-out forwards;
+  }
+
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+      transform: scale(1);
+    }
+    to {
+      opacity: 0;
+      transform: scale(0);
+    }
+  }
+
+  /* Dark Mode Transitions */
+  .dark-mode-transition {
+    @apply transition-colors duration-300 ease-in-out;
+  }
+
+  /* Enhanced Hover Effects */
+  .hover-lift {
+    @apply transition-all duration-300 ease-out;
+  }
+
+  .hover-lift:hover {
+    @apply transform -translate-y-3 scale-105 shadow-2xl;
+  }
 
 
 
-
-
-
-
-
+  /* Navigation Link Underline */
   .nav-link-underline {
-    position: relative;
-    display: inline-block;
+    @apply relative overflow-hidden;
   }
 
   .nav-link-underline::after {
     content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -4px;
-    left: 0;
-    background-color: theme('colors.primary');
-    transition: width 0.3s ease-out;
+    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all duration-300 ease-out;
   }
 
-  .nav-link-underline:hover::after,
-  .nav-link-underline.active::after {
-    width: 100%;
+  .nav-link-underline:hover::after {
+    @apply w-full;
   }
 }
 

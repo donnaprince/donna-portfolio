@@ -85,7 +85,7 @@ const Research = ({ data }) => {
             <motion.div
               key={project.id}
               className={`relative group cursor-pointer transition-all duration-500 ${
-                hoveredCard === index ? 'z-20 scale-105' : 'z-10'
+                hoveredCard === index ? 'z-20' : 'z-10'
               }`}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -94,11 +94,22 @@ const Research = ({ data }) => {
               onMouseEnter={() => setHoveredCard(index)}
               onMouseLeave={() => setHoveredCard(null)}
               onClick={() => openModal(project)}
+              whileHover={{ 
+                scale: 1.05,
+                y: -10,
+                rotateY: 5,
+                transition: { duration: 0.3, type: "spring", stiffness: 300 }
+              }}
+              whileTap={{ scale: 0.98 }}
             >
               {/* Netflix-Style Documentary Card */}
               <motion.div 
                 className="relative bg-gradient-to-br from-gray-900 to-black rounded-2xl overflow-hidden shadow-2xl border-2 border-gray-700 hover:border-primary/50 transition-all duration-500"
-                whileHover={{ y: -10 }}
+                whileHover={{ 
+                  boxShadow: "0 25px 50px -12px rgba(139, 92, 246, 0.4)",
+                  borderColor: "rgba(139, 92, 246, 0.8)",
+                  y: -10
+                }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
                 {/* Poster-Style Cover Image */}

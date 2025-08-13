@@ -5,6 +5,7 @@ import AnimatedSection from './AnimatedSection';
 const Hero = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [currentTime, setCurrentTime] = useState(0);
+  const [trailParticles, setTrailParticles] = useState([]);
   const heroRef = useRef(null);
   
   // Motion values for parallax effects
@@ -27,15 +28,36 @@ const Hero = () => {
         setMousePosition({ x, y });
         mouseX.set(x);
         mouseY.set(y);
+
+        // Add new trail particle
+        const newParticle = {
+          id: Date.now() + Math.random(),
+          x: event.clientX,
+          y: event.clientY,
+          opacity: 1,
+          scale: 1,
+          color: `hsl(${Math.random() * 60 + 240}, 70%, 60%)` // Blue to purple range
+        };
+
+        setTrailParticles(prev => [...prev.slice(-15), newParticle]); // Keep last 15 particles
       }
     };
 
     const handleTimeUpdate = () => {
       setCurrentTime(Date.now());
+      
+      // Update trail particles
+      setTrailParticles(prev => 
+        prev.map(particle => ({
+          ...particle,
+          opacity: particle.opacity * 0.95,
+          scale: particle.scale * 0.98
+        })).filter(particle => particle.opacity > 0.1)
+      );
     };
 
     window.addEventListener('mousemove', handleMouseMove);
-    const timeInterval = setInterval(handleTimeUpdate, 100);
+    const timeInterval = setInterval(handleTimeUpdate, 50);
 
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
@@ -64,6 +86,29 @@ const Hero = () => {
   return (
     <AnimatedSection id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-primaryDark to-black text-white">
       <div ref={heroRef} className="absolute inset-0">
+        {/* Mouse Trail Effects */}
+        {trailParticles.map((particle) => (
+          <motion.div
+            key={particle.id}
+            className="absolute pointer-events-none"
+            style={{
+              left: particle.x - 4,
+              top: particle.y - 4,
+              width: 8,
+              height: 8,
+              backgroundColor: particle.color,
+              borderRadius: '50%',
+              opacity: particle.opacity,
+              scale: particle.scale,
+              filter: 'blur(1px)',
+              boxShadow: `0 0 20px ${particle.color}`
+            }}
+            initial={{ opacity: 1, scale: 1 }}
+            animate={{ opacity: 0, scale: 0 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+          />
+        ))}
+
         {/* Enhanced Bokeh Animation - Multiple Layers for Depth */}
         
         {/* Primary Bokeh Layer - Large, soft, blurred circles */}

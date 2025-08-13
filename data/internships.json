@@ -91,7 +91,7 @@
         "Built VnA Genie tool that generates HTTP, JSON, and SQL files dynamically, orchestrating automated creation of merge requests incorporating generated files",
         "Implemented functional specification generation that creates standardized API request/response definitions for UI/backend contracts, serving as definitive source of truth"
       ],
-      "techStack": "Python, FastMCP, Google ADK, GitLab, Google Cloud Vision API, Gemini AI, Computer Vision, OCR, FastAPI, Docker, Git, Google Cloud Platform, Envoy Proxy, Prometheus, Grafana, Slack API, Kubernetes, Agile/Scrum",
+      "techStack": "Python, FastMCP, Google ADK, GitLab, Google Cloud Vision API, Gemini AI, Computer Vision, OCR, FastAPI, Docker, Git, Google Cloud Storage, Vercel V0, Cursor, Locofy",
       "posterImage": "🤖",
       "category": "Software Engineering & AI",
       "year": "2025",

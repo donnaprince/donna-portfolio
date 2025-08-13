@@ -5,6 +5,7 @@ import AnimatedSection from './AnimatedSection';
 const CareerReel = ({ data }) => {
   const [focusedEpisode, setFocusedEpisode] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
+  const [trailerOpen, setTrailerOpen] = useState(false);
 
   if (!data || !data.internships) {
     return (
@@ -224,8 +225,14 @@ const CareerReel = ({ data }) => {
                     ? 'border-primary shadow-2xl shadow-primary/20 scale-105' 
                     : 'border-gray-700 hover:border-primary/50'
                 }`}
-                whileHover={{ y: -10 }}
-                transition={{ type: "spring", stiffness: 300 }}
+                whileHover={{ 
+                  y: -15,
+                  scale: 1.02,
+                  boxShadow: "0 25px 50px -12px rgba(139, 92, 246, 0.3)",
+                  borderColor: "rgba(139, 92, 246, 0.8)"
+                }}
+                whileTap={{ scale: 0.98 }}
+                transition={{ type: "spring", stiffness: 300, damping: 20 }}
               >
                 {/* Episode Header */}
                 <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between mb-8">
@@ -397,6 +404,88 @@ const CareerReel = ({ data }) => {
                     </div>
                   </div>
                 </div>
+
+                {/* Watch Trailer Button for Episode 3 */}
+                {episode.id === 3 && (
+                  <motion.div 
+                    className="mt-8 text-center"
+                    initial={{ y: 30, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 0.6, delay: 1.2 }}
+                    viewport={{ once: true }}
+                  >
+                    <motion.button
+                      onClick={() => setTrailerOpen(true)}
+                      className="group relative inline-flex items-center space-x-3 px-8 py-4 bg-gradient-to-r from-primary to-secondary text-white font-bold rounded-full shadow-2xl hover:shadow-primary/25 transition-all duration-300 overflow-hidden"
+                      whileHover={{ 
+                        scale: 1.05,
+                        y: -5,
+                        boxShadow: "0 25px 50px -12px rgba(139, 92, 246, 0.4)"
+                      }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      {/* Animated Background */}
+                      <motion.div
+                        className="absolute inset-0 bg-gradient-to-r from-secondary to-accent"
+                        initial={{ x: '-100%' }}
+                        whileHover={{ x: '0%' }}
+                        transition={{ duration: 0.3 }}
+                      />
+                      
+                      {/* Content */}
+                      <span className="relative z-10 flex items-center space-x-3">
+                        <motion.div
+                          className="text-2xl"
+                          animate={{ rotate: [0, 360] }}
+                          transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
+                        >
+                          🎬
+                        </motion.div>
+                        <span>Watch Trailer</span>
+                        <motion.div
+                          className="text-xl"
+                          animate={{ x: [0, 5, 0] }}
+                          transition={{ duration: 1, repeat: Infinity }}
+                        >
+                          →
+                        </motion.div>
+                      </span>
+                    </motion.button>
+                    
+                    {/* Netflix-Style Recommendation Text */}
+                    <motion.div 
+                      className="mt-4 text-center"
+                      initial={{ opacity: 0 }}
+                      whileInView={{ opacity: 1 }}
+                      transition={{ duration: 0.6, delay: 1.5 }}
+                      viewport={{ once: true }}
+                    >
+                      <motion.div 
+                        className="flex items-center justify-center space-x-2 mb-2"
+                        initial={{ scale: 0.8 }}
+                        whileInView={{ scale: 1 }}
+                        transition={{ duration: 0.4, delay: 1.7 }}
+                        viewport={{ once: true }}
+                      >
+                        <span className="text-primary font-bold text-lg">▶</span>
+                        <span className="text-primary font-bold text-sm uppercase tracking-wider">Up Next</span>
+                        <span className="text-primary font-bold text-lg">▶</span>
+                      </motion.div>
+                      
+                      <motion.p 
+                        className="text-sm text-gray-400 max-w-lg mx-auto leading-relaxed"
+                        initial={{ y: 10, opacity: 0 }}
+                        whileInView={{ y: 0, opacity: 1 }}
+                        transition={{ duration: 0.6, delay: 1.8 }}
+                        viewport={{ once: true }}
+                      >
+                        <span className="text-white font-medium">"How to Use AI and Not Be Afraid of It"</span>
+                        <br />
+                        <span className="text-xs text-gray-500">Featured on Instagram • AI & Innovation Talk</span>
+                      </motion.p>
+                    </motion.div>
+                  </motion.div>
+                )}
               </motion.div>
 
               {/* Episode Number Badge */}
@@ -743,6 +832,111 @@ const CareerReel = ({ data }) => {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
           />
+        )}
+      </AnimatePresence>
+
+      {/* Trailer Modal */}
+      <AnimatePresence>
+        {trailerOpen && (
+          <motion.div
+            className="fixed inset-0 z-50 flex items-center justify-center p-4"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+          >
+            {/* Backdrop */}
+            <motion.div
+              className="absolute inset-0 bg-black/80 backdrop-blur-sm"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setTrailerOpen(false)}
+            />
+            
+            {/* Modal Content */}
+            <motion.div
+              className="relative w-full max-w-5xl bg-gradient-to-br from-gray-900 to-black rounded-3xl overflow-hidden shadow-2xl border-2 border-primary/30"
+              initial={{ scale: 0.8, opacity: 0, y: 50 }}
+              animate={{ scale: 1, opacity: 1, y: 0 }}
+              exit={{ scale: 0.8, opacity: 0, y: 50 }}
+              transition={{ type: "spring", stiffness: 300, damping: 30 }}
+            >
+              {/* Modal Header */}
+              <div className="relative p-6 bg-gradient-to-r from-primary/20 to-secondary/20 border-b border-primary/30">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center space-x-3">
+                    <motion.div
+                      className="text-3xl"
+                      animate={{ rotate: [0, 360] }}
+                      transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+                    >
+                      🎬
+                    </motion.div>
+                    <div>
+                      <h3 className="text-2xl font-bold text-white">Episode 3 Trailer</h3>
+                      <p className="text-primary text-sm">Palo Alto Networks - AI & Innovation</p>
+                    </div>
+                  </div>
+                  
+                  <motion.button
+                    onClick={() => setTrailerOpen(false)}
+                    className="p-2 rounded-full bg-gray-800/50 text-gray-300 hover:text-white hover:bg-gray-700/50 transition-colors duration-200"
+                    whileHover={{ scale: 1.1, rotate: 90 }}
+                    whileTap={{ scale: 0.9 }}
+                  >
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </motion.button>
+                </div>
+              </div>
+              
+              {/* Video Container */}
+              <div className="relative p-8">
+                <div className="relative w-full bg-gray-800 rounded-2xl overflow-hidden flex items-center justify-center">
+                  <video
+                    className="w-full h-auto max-h-[70vh] object-contain rounded-xl cursor-pointer"
+                    controls
+                    loop
+                    poster="/images/paloalto.png"
+                    style={{ minHeight: '400px', maxWidth: '100%' }}
+                    preload="metadata"
+                    onLoadedData={() => console.log('Video loaded successfully')}
+                    onError={(e) => console.error('Video error:', e)}
+                  >
+                    <source src="/images/PaloAltoInsta.mov" type="video/quicktime" />
+                    <source src="/images/PaloAltoInsta.mov" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+                
+                {/* Video Description */}
+                <div className="mt-6 text-center">
+                  <h4 className="text-xl font-semibold text-white mb-3">
+                    "How to Use AI and Not Be Afraid of It"
+                  </h4>
+                  <p className="text-gray-300 text-sm leading-relaxed max-w-2xl mx-auto">
+                    Featured on Instagram, I share insights about embracing AI technology and how it can enhance our daily lives. 
+                    Learn practical tips for integrating AI tools while maintaining control and understanding.
+                  </p>
+                  
+                  {/* Social Media Tags */}
+                  <div className="flex items-center justify-center space-x-4 mt-4">
+                    <span className="px-3 py-1 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs font-medium rounded-full">
+                      #AI #Innovation
+                    </span>
+                    <span className="px-3 py-1 bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-xs font-medium rounded-full">
+                      #TechTalk
+                    </span>
+                    <span className="px-3 py-1 bg-gradient-to-r from-green-500 to-emerald-500 text-white text-xs font-medium rounded-full">
+                      #PaloAltoNetworks
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
         )}
       </AnimatePresence>
     </section>
