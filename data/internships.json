@@ -45,7 +45,7 @@
         "Built scalable log collection framework using Python-Flask backend with GCP integration, enabling automated troubleshooting and reducing manual intervention in support workflows",
         "Implemented cloud-native architecture using Google Cloud Platform for log storage and processing, with automated Slack notifications for operational awareness and team collaboration"
       ],
-      "techStack": "Python, FastMCP, Google ADK, GitLab, Google Cloud Vision API, Gemini AI, Computer Vision, OCR, FastAPI, Docker, Git, Google Cloud Platform, Envoy Proxy, Prometheus, Grafana, Slack API, Kubernetes, Agile/Scrum",
+      "techStack": "Python, Flask, Google Cloud Storage, Prometheus, Grafana, Slack API, Docker, Kubernetes, Sourcegraph Cody",
       "posterImage": "🛡️",
       "category": "Software Engineering",
       "year": "2024",
