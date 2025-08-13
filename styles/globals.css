@@ -1,0 +1,205 @@
+/* Tailwind CSS Directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base Styles */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-white text-black font-sans antialiased;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+    line-height: 1.6;
+  }
+
+  /* Typography */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight;
+  }
+
+  h1 { @apply text-4xl md:text-5xl lg:text-6xl; }
+  h2 { @apply text-3xl md:text-4xl lg:text-5xl; }
+  h3 { @apply text-2xl md:text-3xl lg:text-4xl; }
+  h4 { @apply text-xl md:text-2xl lg:text-3xl; }
+  h5 { @apply text-lg md:text-xl lg:text-2xl; }
+  h6 { @apply text-base md:text-lg lg:text-xl; }
+
+  /* Focus and Accessibility */
+  :focus-visible {
+    outline: 2px solid theme('colors.primary');
+    outline-offset: 2px;
+  }
+
+  /* Selection Color */
+  ::selection {
+    background-color: theme('colors.primary');
+    color: white;
+  }
+
+  /* Skip to Content Link */
+  .skip-to-content-link {
+    @apply absolute -top-96 left-1/2 -translate-x-1/2 bg-primary text-white px-4 py-2 rounded-md focus:top-4 focus:z-50 transition-all duration-300;
+  }
+}
+
+/* Custom Components/Utilities */
+@layer components {
+  /* Button Styles */
+  .btn-primary {
+    @apply bg-primary hover:bg-primaryDark text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 inline-flex items-center justify-center;
+  }
+
+  .btn-secondary {
+    @apply bg-transparent border-2 border-primary text-primary hover:bg-primary/10 font-semibold py-3 px-6 rounded-lg transition-all duration-300 inline-flex items-center justify-center;
+  }
+
+  .btn-primary-enhanced {
+    @apply bg-gradient-to-r from-primary to-secondary hover:from-primaryDark hover:to-primary text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 inline-flex items-center justify-center shadow-lg hover:shadow-xl;
+  }
+
+  .btn-secondary-enhanced {
+    @apply bg-transparent border-2 border-primary text-primary hover:bg-primary/10 font-semibold py-3 px-6 rounded-lg transition-all duration-300 inline-flex items-center justify-center;
+  }
+
+  /* Chip Styles */
+  .chip {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-primary/10 text-primary border border-primary/20;
+  }
+
+  /* Section Headings */
+  .section-heading {
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-12;
+    text-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+  }
+
+  /* Container */
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Section Padding */
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+
+  /* Touch Target */
+  .touch-target {
+    @apply min-h-[44px] min-w-[44px];
+  }
+
+  /* Timeline Styles */
+  .timeline-dot {
+    @apply w-6 h-6 bg-primary rounded-full flex items-center justify-center text-white text-sm font-bold;
+  }
+
+  .timeline-connector {
+    @apply absolute left-3 top-6 w-0.5 h-full bg-primary;
+  }
+
+  .timeline-item {
+    @apply relative mb-8;
+  }
+
+  .timeline-content {
+    @apply ml-8;
+  }
+
+
+
+
+
+
+
+
+
+  .nav-link-underline {
+    position: relative;
+    display: inline-block;
+  }
+
+  .nav-link-underline::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: theme('colors.primary');
+    transition: width 0.3s ease-out;
+  }
+
+  .nav-link-underline:hover::after,
+  .nav-link-underline.active::after {
+    width: 100%;
+  }
+}
+
+
+
+
+
+/* Research Modal CSS */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+  padding: 1rem;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  max-width: 48rem;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+
+
+
+
+/* Smooth transitions for all interactive elements */
+* {
+  transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Responsive animations */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+
+
+
+
+/* Enhanced Movie Title Typography */
+.movie-title {
+  font-family: 'Caveat', cursive;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-shadow: 
+    0 0 10px rgba(139, 69, 19, 0.8),
+    0 0 20px rgba(139, 69, 19, 0.6),
+    0 0 30px rgba(139, 69, 19, 0.4);
+}
+
+

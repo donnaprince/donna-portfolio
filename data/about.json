@@ -1,0 +1,42 @@
+{
+  "personalInfo": {
+    "name": "Donna Prince",
+    "title": "Software Engineer & Product Thinker",
+    "graduationDate": "December 2025",
+    "location": "San Francisco Bay Area",
+    "email": "donna.prince@example.com",
+    "linkedin": "https://linkedin.com/in/donnaprince",
+    "github": "https://github.com/donnaprince"
+  },
+  "bio": "I'm a passionate software engineer with a unique blend of technical expertise and creative thinking. My journey in technology began with a curiosity about how digital experiences can enhance human creativity and solve real-world problems. I believe in building technology that not only functions flawlessly but also delights users and makes a positive impact.",
+  "highlights": [
+    "Full-stack development with modern web technologies",
+    "Research-driven development approach"
+  ],
+  "education": [
+    {
+      "year": "2021 - 2025",
+      "degree": "B.S. Computer Science",
+      "institution": "University of Technology",
+      "description": "Focus on software engineering, HCI, and creative technologies",
+      "icon": "🎓",
+      "category": "education"
+    },
+    {
+      "year": "Dec 2025",
+      "degree": "Graduation",
+      "institution": "Ready for new challenges!",
+      "description": "Excited to bring my skills to innovative projects",
+      "icon": "🎉",
+      "category": "milestone"
+    }
+  ],
+  "interests": [
+    "Human-Computer Interaction",
+    "Creative Technology",
+    "Sustainable Software",
+    "Accessibility",
+    "Generative Art",
+    "Product Design"
+  ]
+}

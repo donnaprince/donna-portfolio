@@ -1,0 +1,46 @@
+{
+  "researchProjects": [
+    {
+      "id": 1,
+      "title": "Real-Time Viewer Perceptions of 'Pedohunter' Content on Twitch",
+      "problem": "How do real-time viewers react to vigilante-style 'pedohunter' confrontations on Twitch, and how does sentiment shift during key moments of the encounter?",
+      "method": "Developed a sentiment analysis pipeline for 5,000+ Twitch comments, leveraging Python preprocessing, BERT-mini sentiment classification, and matplotlib visualizations to map audience sentiment over time. Physical actions in videos were manually coded to align with sentiment changes.",
+      "findings": "Analysis revealed distinct spikes in negative sentiment during moments of physical confrontation and chasing, while verbal exchanges often triggered mixed reactions. Thematic analysis highlighted recurring audience stances such as moral disapproval, calls for escalation, and entertainment value.",
+      "abstract": "This study examines real-time audience perceptions of vigilante-led 'pedohunter' confrontations streamed on Twitch. We developed a custom pipeline combining Python preprocessing, BERT-mini sentiment classification, and matplotlib time-series visualizations to analyze over 5,000 viewer comments. Physical actions (e.g., standing, chasing, assault) were qualitatively coded and aligned with sentiment trends. Results indicate that negative sentiment sharply increases during aggressive physical acts, whereas non-violent verbal exchanges elicit more varied emotional responses. Thematic analysis revealed patterns including moral condemnation of vigilante tactics, fascination with confrontation as entertainment, and debates over justice versus safety. These findings provide insight into how live-streamed vigilante content shapes audience attitudes toward both justice and violence.",
+      "externalLink": "https://www.cerias.purdue.edu/assets/symposium/2025-posters/YL5-JBW.pdf",
+      "category": "Sentiment Analysis & Online Behavior",
+      "year": "2025",
+      "status": "Research",
+      "icon": "🎯",
+      "tags": ["Sentiment Analysis", "Online Behavior", "Twitch", "BERT", "Python", "Data Visualization"]
+    },
+    {
+      "id": 2,
+      "title": "Use of Ephemeral Messages in Online Transactions",
+      "problem": "How does the disappearing nature of ephemeral messages in online scams influence user perception, trust, and response across different social media platforms?",
+      "method": "Designed a theory-informed Qualtrics survey to capture user reactions to ephemeral scam messages across various platforms and content types. The survey examines how factors such as platform affordances, message type, and framing may influence user behavior.",
+      "findings": "Work in progress. Data collection is ongoing, with preliminary responses indicating platform-specific differences in how users perceive and act on ephemeral messages.",
+      "abstract": "Work in progress. This study investigates the socio-technical dynamics of ephemeral content in online scams, focusing on how disappearing messages shape user perceptions, responses, and susceptibility. Using a theory-informed Qualtrics survey, we are collecting data on user experiences across multiple social media platforms and scam content types. The goal is to identify patterns in how platform design and message framing impact urgency, trust, and fact-checking behavior.",
+      "externalLink": "",
+      "category": "HCI & Cybersecurity",
+      "year": "2025",
+      "status": "In Progress",
+      "icon": "🔒",
+      "tags": ["HCI", "Cybersecurity", "Ephemeral Messages", "Online Scams", "User Behavior", "Qualtrics"]
+    },
+    {
+      "id": 3,
+      "title": "Future Research Project",
+      "problem": "New research direction in development - exploring emerging challenges at the intersection of technology and society.",
+      "method": "Research methodology and approach to be determined based on project scope and objectives.",
+      "findings": "Project in early planning stages. More details coming soon as research direction develops.",
+      "abstract": "This research project is currently in development and will explore new frontiers in human-computer interaction, artificial intelligence, or socio-technical systems. The specific focus area and methodology will be determined as the project evolves.",
+      "externalLink": "",
+      "category": "Coming Soon",
+      "year": "2025",
+      "status": "Planning",
+      "icon": "🚀",
+      "tags": ["Future Research", "Planning", "TBD"]
+    }
+  ]
+}

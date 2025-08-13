@@ -1,0 +1,119 @@
+{
+  "internships": [
+    {
+      "id": 1,
+      "title": "Full Stack Software Engineering Intern",
+      "company": "Liberty Mutual",
+      "role": "Full Stack Software Engineering Intern",
+      "duration": "May 2023 - August 2023",
+      "highlights": [
+        "Enhanced Java-based RESTful API using Spring Boot to display pertinent user data on web application dashboard and conducted comprehensive Postman testing to validate API stability",
+        "Refactored underwriting dashboard with TypeScript(JS) and Angular, enabling users to swiftly validate information, resulting in substantial time savings of 5-8 minutes per request",
+        "Resolved production defects with SQL updates using Liquibase for Db2/AWS RDS, ensuring application health through Splunk and Datadog, yielding improved efficiencies within the underwriting workflow",
+        "Created endpoints within blue-task-routing API to retrieve pool names and destinations, improving user experience and data clarity on main dashboard",
+        "Implemented destination validation system to prevent incorrect pool ID entries during rule creation, enhancing data integrity and user confidence",
+        "Added loading indicators and spinner functionality to main dashboard, providing clear user feedback during API calls and data retrieval",
+        "Established valid values table in DB2 to store dynamic dropdown options, replacing hardcoded values with database-driven selections for role codes and source systems"
+      ],
+      "techStack": "Spring Boot, Java, Angular, TypeScript, Postman, Bamboo, CloudForge, Splunk, Datadog, SQL, DBVisualizer",
+      "posterImage": "🏢",
+      "category": "Full Stack Software Engineering",
+      "year": "2023",
+      "status": "Completed",
+      "linkedinRecommendations": [
+        {
+          "author": "Chelsea Tornow, PMP",
+          "title": "Manager, Software Engineering",
+          "company": "Liberty Mutual Insurance",
+          "content": "I had the pleasure of working with Donna during her summer here at Liberty Mutual. What stood out about Donna was her proactiveness, organization, and drive to learn. She came thoroughly prepared to every mentor pairing session, every 1:1, and was clear about what she needed to make this internship a success. It was awesome watching her grow and amazing to see the work she was able to deliver in such a short amount of time. She left a very positive impression on me and the team she worked with, setting the bar high for future interns! I would absolutely recommend her for future software engineering roles and know she has a bright future ahead of her. We hope to see you back here at Liberty, Donna!",
+          "rating": 5,
+          "date": "August 21, 2023"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Software Engineering Intern",
+      "company": "Palo Alto Networks",
+      "role": "Software Engineering Intern",
+      "duration": "May 2024 - August 2024",
+      "highlights": [
+        "Engineered an Envoy proxy agent to automate log collection and upload to Google Cloud Platform, significantly enhancing developer troubleshooting efficiency",
+        "Reduced developer response time by 30% by creating a Python-Flask backend service for automatic log collection with Slack bot integration, increasing cases resolved in under 3 days from 25% to 40%",
+        "Implemented backend monitoring by integrating Prometheus for scalable metrics collection and alerting, with Grafana for advanced visualization, resulting in system observability and actionable insights",
+        "Designed and implemented comprehensive Grafana dashboard monitoring system achieving 100% availability with real-time metrics tracking for API endpoints including support bundle operations",
+        "Built scalable log collection framework using Python-Flask backend with GCP integration, enabling automated troubleshooting and reducing manual intervention in support workflows",
+        "Implemented cloud-native architecture using Google Cloud Platform for log storage and processing, with automated Slack notifications for operational awareness and team collaboration"
+      ],
+      "techStack": "Python, FastMCP, Google ADK, GitLab, Google Cloud Vision API, Gemini AI, Computer Vision, OCR, FastAPI, Docker, Git, Google Cloud Platform, Envoy Proxy, Prometheus, Grafana, Slack API, Kubernetes, Agile/Scrum",
+      "posterImage": "🛡️",
+      "category": "Software Engineering",
+      "year": "2024",
+      "status": "Completed",
+      "linkedinRecommendations": [
+        {
+          "author": "Madhusudan Nanjanagud",
+          "title": "Strategic Systems Leader | Drives Innovative Business Solutions",
+          "company": "Palo Alto Networks",
+          "content": "I had the opportunity to mentor Donna Prince during her internship with our team at Palo Alto Networks, and I'm thoroughly impressed with her performance, technical acumen, and growth mindset. Donna quickly established herself as a reliable and driven team member. She made meaningful contributions to the EP Support Bundle initiative, demonstrating a strong grasp of both backend architecture and user experience. Her ability to break down complex problems and deliver effective solutions under tight deadlines was remarkable for someone early in their career. One thing that particularly stood out was Donna's proactive approach—she didn't just complete assigned tasks; she actively sought feedback, asked thoughtful questions, and iterated on her work until it met the highest standards. Whether she was designing services or working on deployment pipelines, Donna brought clarity, focus, and technical depth to the table. Her collaborative nature made her a joy to work with. She engaged seamlessly with engineers across teams, adapted to our agile process quickly, and was always open to suggestions—traits that will serve her well in any high-performing environment. I wholeheartedly recommend Donna for any role that requires technical strength, a learning mindset, and a team-first attitude. I'm confident she has a bright future ahead, and I look forward to seeing where her career takes her.",
+          "rating": 5,
+          "date": "July 28, 2024"
+        },
+        {
+          "author": "Raghavaiah Avula",
+          "title": "Senior Principal Engineer & Architect | Cybersecurity | Cloud & AI",
+          "company": "Palo Alto Networks",
+          "content": "I had the pleasure of working closely with Donna Prince during her tenure with the PA Explicit Proxy team, where she contributed significantly to the intern project EP Support Bundle. Donna's leadership and technical skills were instrumental in implementing this feature, which resulted in a remarkable 40% reduction in customer support case resolution time. Donna's agile approach over two sprints was commendable. She swiftly grasped complex cloud concepts and successfully developed three key services encompassing UI, backend, and agent functionalities. Her proficiency extended to seamless deployment on the operational platform, showcasing her versatility and depth of understanding. Beyond her technical prowess, Donna's dedication to project deadlines and collaborative spirit stood out. She effectively liaised with internal and external teams, ensuring seamless integration and project milestones. I have no hesitation in recommending Donna Prince for future projects. Her energy, expertise, and commitment make her an invaluable asset. I wish her continued success in her career, and I look forward to the possibility of collaborating again at Palo Alto Networks.",
+          "rating": 5,
+          "date": "August 3, 2024"
+        },
+        {
+          "author": "Sanal Thekkanath",
+          "title": "Software Engineer",
+          "company": "Palo Alto Networks",
+          "content": "Donna have been an amazing person and a great engineer. She is really quick in understanding the problem that needs to be solved, identify relevant areas and tech involved to start with the implementation. She have been able work on multiple services in a large scale distributed system architecture and contribute across multiple areas and tying all together into a really impactful contribution to the product. I wish Donna the best 👍",
+          "rating": 5,
+          "date": "August 3, 2024"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Software Engineering Intern",
+      "company": "Palo Alto Networks",
+      "role": "Software Engineering Intern",
+      "duration": "May 2025 - August 2025",
+      "highlights": [
+        "Developed GitLab MCP server leveraging Python FastMCP to automate merge request creation from the Google ADK agent, reducing manual effort by 80%",
+        "Engineered a Google ADK-based agent to streamline functional spec and API contract creation, reducing documentation time by 43% and enhancing standardization to reduce revisions and align teams",
+        "Automated API contract generation from images using a two-phase computer vision system with Google Cloud Vision (classification/OCR) and Gemini for data extraction, improving efficiency by 20%",
+        "Evaluated Figma-to-code tools (Locofy, Vercel V0, Cursor) for design system integration, code quality",
+        "Built VnA Genie tool that generates HTTP, JSON, and SQL files dynamically, orchestrating automated creation of merge requests incorporating generated files",
+        "Implemented functional specification generation that creates standardized API request/response definitions for UI/backend contracts, serving as definitive source of truth"
+      ],
+      "techStack": "Python, FastMCP, Google ADK, GitLab, Google Cloud Vision API, Gemini AI, Computer Vision, OCR, FastAPI, Docker, Git, Google Cloud Platform, Envoy Proxy, Prometheus, Grafana, Slack API, Kubernetes, Agile/Scrum",
+      "posterImage": "🤖",
+      "category": "Software Engineering & AI",
+      "year": "2025",
+      "status": "Completed",
+      "linkedinRecommendations": [
+        {
+          "author": "Waiting on Reviews",
+          "title": "Manager/Team Lead",
+          "company": "Palo Alto Networks",
+          "content": "Reviews will be added once available from the 2025 internship.",
+          "rating": 0,
+          "date": "Pending"
+        },
+        {
+          "author": "Waiting on Reviews",
+          "title": "Senior Engineer/Mentor",
+          "company": "Palo Alto Networks",
+          "content": "Reviews will be added once available from the 2025 internship.",
+          "rating": 0,
+          "date": "Pending"
+        }
+      ]
+    }
+  ]
+}
