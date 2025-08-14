@@ -169,11 +169,11 @@ const GalleryMode = ({ currentCategory }) => {
                           alt={`Step ${step.step}: ${step.title}`}
                           className={`w-full rounded-lg ${
                             step.image.includes('baltik') || step.image.includes('Resin3')
-                              ? 'h-56 object-contain bg-gray-800 object-center' 
+                              ? 'h-64 object-contain bg-gray-800' 
                               : 'h-48 object-cover'
                           }`}
                           style={{
-                            objectPosition: step.image.includes('baltik') ? 'center 30%' : 
+                            objectPosition: step.image.includes('baltik') ? 'center' : 
                                          step.image.includes('Resin3') ? 'center' : 'center'
                           }}
                         />
