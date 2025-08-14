@@ -86,26 +86,26 @@ const ArtworkGrid = ({ currentCategory, onArtSelect }) => {
           step: 1,
           title: "Sketching the Design",
           description: "Drawing the layout on a wooden board, mapping out patterns and spaces for clay work and mirrors.",
-          image: "/images/lippan1.jpeg"
+          image: "/images/Lippan1.jpeg"
         },
         {
           step: 2,
           title: "Clay Preparation & Application",
           description: "Mixing clay with Fevicryl adhesive in roughly a 3:1 ratio (clay : Fevicryl) to create a smooth, pliable paste. Rolling and shaping the mixture along the sketched outlines to form raised patterns.",
-          image: "/images/lippan2.jpeg"
+          image: "/images/Lippan2.jpeg"
         },
         {
           step: 3,
           title: "Painting & Mirror Inlay",
           description: "Painting the dried clay designs with vibrant colors and embedding small reflective mirrors to enhance the piece's decorative appeal.",
-          image: "/images/lippan3.jpeg"
+          image: "/images/Lippan3.jpeg"
         }
       ],
       tags: ["Folk Art", "Indian Craft", "Lippan Kaam", "Clay Art", "Mirror Work"],
       year: "2025",
       materials: ["Wooden Board", "Clay + Fevicryl Adhesive (3:1 ratio)", "Small Reflective Mirrors", "Paints", "Adhesive"],
       difficulty: "Easy",
-      coverImage: "/images/lippan3.jpeg",
+      coverImage: "/images/Lippan3.jpeg",
       country: "India",
       history: "Lippan art, also known as Lippan Kaam or Mud and Mirror Work, is a traditional mural craft from the Kutch region of Gujarat, India. Historically practiced by the Rabari community to decorate the interior walls of their homes, the art originally used a mixture of clay and camel dung for durability. Modern adaptations often replace camel dung with adhesives like Fevicryl for cleaner, longer-lasting results. The embedded mirrors are believed to ward off evil spirits and reflect light, brightening interiors in arid regions. Today, Lippan art is celebrated both as cultural heritage and as a contemporary decorative medium."
     },
