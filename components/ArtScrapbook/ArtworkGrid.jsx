@@ -14,19 +14,19 @@ const ArtworkGrid = ({ currentCategory, onArtSelect }) => {
           step: 1,
           title: "Wax Application",
           description: "Applying hot wax to create the detailed outlines of the hummingbird and wisteria design, ensuring the protected areas will resist dye during painting.",
-          image: "/images/baltik1.jpeg"
+          image: "/images/Baltik1.jpeg"
         },
         {
           step: 2,
           title: "Dye Painting & Special Effects",
           description: "Brushing vibrant dyes into the fabric, layering colors for depth. Added salt to the painted bird section to produce a textured, airy effect that suggests motion in flight.",
-          image: "/images/baltik2.jpeg"
+          image: "/images/Baltik2.jpeg"
         },
         {
           step: 3,
           title: "Wax Removal & Finishing",
           description: "Gently removing the wax to reveal crisp lines, refining colors for balance, and preparing the scarf for shipment as a completed wearable artwork.",
-          image: "/images/baltik3.jpeg"
+          image: "/images/Baltik3.jpeg"
         }
       ],
       tags: ["Batik", "Textile Art", "Hand-Painted"],
