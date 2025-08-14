@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useRouter } from 'next/router';
 
 const Navigation = ({ activeSection }) => {
+  const router = useRouter();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -50,17 +52,25 @@ const Navigation = ({ activeSection }) => {
     { id: 'about', label: 'About', href: '#about' },
     { id: 'career-reel', label: 'Experience', href: '#career-reel' },
     { id: 'research', label: 'Research', href: '#research' },
+    { id: 'art-scrapbook', label: 'Art', href: '/art-scrapbook' },
     { id: 'contact', label: 'Contact', href: '#contact' }
   ];
 
   const scrollToSection = (href) => {
-    const element = document.querySelector(href);
-    if (element) {
-      const offsetTop = element.offsetTop - 80;
-      window.scrollTo({
-        top: offsetTop,
-        behavior: 'smooth'
-      });
+    // Check if it's a page route (starts with /) or an anchor link (starts with #)
+    if (href.startsWith('/')) {
+      // It's a page route, navigate to it using Next.js router
+      router.push(href);
+    } else {
+      // It's an anchor link, scroll to the section
+      const element = document.querySelector(href);
+      if (element) {
+        const offsetTop = element.offsetTop - 80;
+        window.scrollTo({
+          top: offsetTop,
+          behavior: 'smooth'
+        });
+      }
     }
     setIsMobileMenuOpen(false);
   };
@@ -119,7 +129,11 @@ const Navigation = ({ activeSection }) => {
               {navItems.map((item) => (
                 <motion.button
                   key={item.id}
-                  onClick={() => scrollToSection(item.href)}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    scrollToSection(item.href);
+                  }}
                   onKeyDown={(e) => handleKeyDown(e, item.href)}
                   className={`relative px-4 py-2 rounded-lg font-medium transition-all duration-300 nav-link-underline ${
                     activeSection === item.id
@@ -215,7 +229,11 @@ const Navigation = ({ activeSection }) => {
                   {navItems.map((item) => (
                     <motion.button
                       key={item.id}
-                      onClick={() => scrollToSection(item.href)}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        scrollToSection(item.href);
+                      }}
                       className={`w-full text-left px-4 py-3 rounded-lg font-medium transition-all duration-300 ${
                         activeSection === item.id
                           ? 'text-white bg-primaryDark border-l-4 border-white shadow-lg'

@@ -16,22 +16,40 @@ export default function Home({ aboutData, internshipsData, researchData }) {
   useEffect(() => {
     const handleScroll = () => {
       const sections = ['hero', 'about', 'research', 'career-reel', 'contact'];
-      const scrollPosition = window.scrollY + window.innerHeight / 3;
+      const scrollPosition = window.scrollY + window.innerHeight / 2;
 
+      // Find which section is currently in view
+      let currentSection = 'hero';
+      
       for (let i = sections.length - 1; i >= 0; i--) {
         const section = document.getElementById(sections[i]);
-        if (section && section.offsetTop <= scrollPosition) {
-          setActiveSection(sections[i]);
-          break;
+        if (section) {
+          const sectionTop = section.offsetTop;
+          const sectionBottom = sectionTop + section.offsetHeight;
+          
+          if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+            currentSection = sections[i];
+            break;
+          }
         }
       }
+      
+      setActiveSection(currentSection);
 
       // Show back to top button after scrolling down
       setShowBackToTop(window.scrollY > 500);
     };
 
+    // Add a small delay to ensure DOM is ready
+    const timeoutId = setTimeout(() => {
+      handleScroll();
+    }, 100);
+
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      clearTimeout(timeoutId);
+    };
   }, []);
 
   const scrollToTop = () => {

@@ -79,7 +79,7 @@ const Research = ({ data }) => {
           </motion.div>
         </AnimatedSection>
 
-        {/* Netflix Documentary Series Grid */}
+        {/* Research Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {researchProjects.map((project, index) => (
             <motion.div
@@ -102,7 +102,7 @@ const Research = ({ data }) => {
               }}
               whileTap={{ scale: 0.98 }}
             >
-              {/* Netflix-Style Documentary Card */}
+              {/* Research Project Card */}
               <motion.div 
                 className="relative bg-gradient-to-br from-gray-900 to-black rounded-2xl overflow-hidden shadow-2xl border-2 border-gray-700 hover:border-primary/50 transition-all duration-500"
                 whileHover={{ 
@@ -271,7 +271,7 @@ const Research = ({ data }) => {
             transition={{ duration: 0.3 }}
           >
             <motion.div
-              className="modal-content bg-white dark:bg-gray-900 rounded-2xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto relative"
+              className="modal-content bg-white dark:bg-gray-900 rounded-2xl shadow-2xl max-w-6xl w-full max-h-[95vh] overflow-y-auto relative"
               initial={{ scale: 0.8, opacity: 0, y: 50 }}
               animate={{ scale: 1, opacity: 1, y: 0 }}
               exit={{ scale: 0.8, opacity: 0, y: 50 }}
@@ -282,7 +282,7 @@ const Research = ({ data }) => {
                 <div>
                   <h3 className="text-2xl font-bold text-primary">{selectedResearch.title}</h3>
                   <p className="text-gray-600 dark:text-gray-400 text-sm">
-                    {selectedResearch.year} • Documentary • {selectedResearch.category || 'Tech & Innovation'}
+                    {selectedResearch.year} • {selectedResearch.category || 'Tech & Innovation'}
                   </p>
                 </div>
                 <motion.button

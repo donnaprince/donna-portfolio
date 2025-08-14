@@ -99,6 +99,16 @@
     @apply min-h-[44px] min-w-[44px];
   }
 
+  /* Hide Scrollbars */
+  .scrollbar-hide {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;  /* Safari and Chrome */
+  }
+
   /* Timeline Styles */
   .timeline-dot {
     @apply w-6 h-6 bg-primary rounded-full flex items-center justify-center text-white text-sm font-bold;
