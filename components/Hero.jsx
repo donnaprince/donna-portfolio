@@ -484,8 +484,8 @@ const Hero = () => {
                 >
                   {stat.icon}
                 </motion.div>
-                <h4 className="font-semibold text-gray-900 dark:text-white mb-1">{stat.label}</h4>
-                <p className="text-gray-800 dark:text-primary font-medium font-bold">{stat.value}</p>
+                <h4 className="font-semibold text-gray-900 mb-1">{stat.label}</h4>
+                <p className="text-gray-800 font-medium font-bold">{stat.value}</p>
               </motion.div>
             ))}
           </motion.div>

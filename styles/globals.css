@@ -15,15 +15,6 @@
     line-height: 1.6;
   }
 
-  /* Dark Mode Support */
-  .dark {
-    @apply bg-gray-900 text-white;
-  }
-
-  .dark body {
-    @apply bg-gray-900 text-white;
-  }
-
   /* Typography */
   h1, h2, h3, h4, h5, h6 {
     @apply font-bold tracking-tight;
@@ -158,11 +149,6 @@
     }
   }
 
-  /* Dark Mode Transitions */
-  .dark-mode-transition {
-    @apply transition-colors duration-300 ease-in-out;
-  }
-
   /* Enhanced Hover Effects */
   .hover-lift {
     @apply transition-all duration-300 ease-out;
@@ -171,8 +157,6 @@
   .hover-lift:hover {
     @apply transform -translate-y-3 scale-105 shadow-2xl;
   }
-
-
 
   /* Navigation Link Underline */
   .nav-link-underline {

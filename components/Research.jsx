@@ -271,23 +271,23 @@ const Research = ({ data }) => {
             transition={{ duration: 0.3 }}
           >
             <motion.div
-              className="modal-content bg-white dark:bg-gray-900 rounded-2xl shadow-2xl max-w-6xl w-full max-h-[95vh] overflow-y-auto relative"
+              className="modal-content bg-white rounded-2xl shadow-2xl max-w-6xl w-full max-h-[95vh] overflow-y-auto relative"
               initial={{ scale: 0.8, opacity: 0, y: 50 }}
               animate={{ scale: 1, opacity: 1, y: 0 }}
               exit={{ scale: 0.8, opacity: 0, y: 50 }}
               transition={{ duration: 0.3, type: "spring", stiffness: 300 }}
             >
               {/* Modal Header */}
-              <div className="sticky top-0 bg-white dark:bg-gray-900 p-6 border-b border-gray-200 dark:border-gray-700 flex justify-between items-center z-10 rounded-t-2xl">
+              <div className="sticky top-0 bg-white p-6 border-b border-gray-200 flex justify-between items-center z-10 rounded-t-2xl">
                 <div>
                   <h3 className="text-2xl font-bold text-primary">{selectedResearch.title}</h3>
-                  <p className="text-gray-600 dark:text-gray-400 text-sm">
+                  <p className="text-gray-600 text-sm">
                     {selectedResearch.year} • {selectedResearch.category || 'Tech & Innovation'}
                   </p>
                 </div>
                 <motion.button
                   onClick={closeModal}
-                  className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 text-3xl font-bold w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-300"
+                  className="text-gray-500 hover:text-gray-700 text-3xl font-bold w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-100 transition-colors duration-300"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
                   transition={{ type: "spring", stiffness: 300 }}
@@ -309,7 +309,7 @@ const Research = ({ data }) => {
                     <span className="mr-2">🎯</span>
                     The Problem
                   </h4>
-                  <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+                  <p className="text-gray-700 leading-relaxed">
                     {selectedResearch.problem}
                   </p>
                 </motion.div>
@@ -325,7 +325,7 @@ const Research = ({ data }) => {
                     <span className="mr-2">🔬</span>
                     The Method
                   </h4>
-                  <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+                  <p className="text-gray-700 leading-relaxed">
                     {selectedResearch.method}
                   </p>
                 </motion.div>
@@ -343,7 +343,7 @@ const Research = ({ data }) => {
                       The Findings
                     </span>
                   </h4>
-                  <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+                  <p className="text-gray-700 leading-relaxed">
                     {selectedResearch.findings}
                   </p>
                 </motion.div>
@@ -360,7 +360,7 @@ const Research = ({ data }) => {
                       <span className="mr-2">📖</span>
                       Full Abstract
                     </h4>
-                    <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+                    <p className="text-gray-700 leading-relaxed">
                       {selectedResearch.abstract}
                     </p>
                   </motion.div>

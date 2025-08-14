@@ -37,14 +37,6 @@ const Navigation = () => {
               </svg>
               <span className="font-medium">Back to Portfolio</span>
             </Link>
-
-            {/* Art Scrapbook indicator */}
-            <div className="flex items-center space-x-2 px-4 py-2 rounded-full bg-gradient-to-r from-pink-500/20 to-purple-500/20 border border-pink-500/30">
-              <div className="w-2 h-2 bg-pink-400 rounded-full animate-pulse"></div>
-              <span className="text-sm font-medium text-pink-200">
-                Art Scrapbook
-              </span>
-            </div>
           </div>
         </div>
       </div>
